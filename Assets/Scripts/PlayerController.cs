@@ -13,9 +13,6 @@ public class PlayerController : MonoBehaviour
     [Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
     public GameObject CinemachineCameraTarget;
     [SerializeField] private float mouseSensitivity;
-    public Transform firePoint; // Punto de disparo
-    public GameObject bulletPrefab; // Prefab de la bala
-    public int bulletSpeed = 50;
     //SETTINGS MOVEMENT
     [SerializeField] private float speed = 4;
     [SerializeField] private float sprintSpeed = 6;
@@ -25,6 +22,12 @@ public class PlayerController : MonoBehaviour
     private bool canJump;
     [SerializeField] private int jumpForce = 5;
     private Rigidbody rb;
+
+    //SETTINGS FIRE
+    public Transform firePoint; // Punto de disparo
+    public GameObject bulletPrefab; // Prefab de la bala
+    public int bulletSpeed = 50;
+    public bool isReadyToFire = false;
 
 
     // Start is called before the first frame update
@@ -94,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnFire(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && isReadyToFire)
         {
 
             // Update is called once per frame

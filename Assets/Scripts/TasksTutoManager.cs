@@ -74,6 +74,7 @@ public class TasksTutoManager : MonoBehaviour
     {
         tasksTexts.text = "";
         StartCoroutine(SetTaskText(task03));
+
     }
 
     public void task03Complete()

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - TutoObject
+  - ActivatorObject
   layers:
   - Default
   - TransparentFX

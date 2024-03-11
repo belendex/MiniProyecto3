@@ -10,8 +10,7 @@ public class TasksTutoManager : MonoBehaviour
     private string task02 = "Recoge tu arma del mostrador";
     private string task03 = "Elimina todos los objetivos";
     private string task04 = "Habla con el sargento de nuevo";
-    private string task05 = "Prueba con esta otra arma";
-    private string task06 = "Vuelve a destruir todos los objetivos";
+    private string task06 = "Vuelve a destruir todos los objetivos con tu otra arma";
     private string task07 = "Habla con el sargento para acabar";
     private string task08 = "Sal del campo de tiro";
 
@@ -86,20 +85,13 @@ public class TasksTutoManager : MonoBehaviour
                 return;
             }
         }
-
         tasksTexts.text = "";
+        StopCoroutine(SetTaskText(task04));
         soldierTutoMission.ourTask = MissionScript.tasks.task04;
         soldierTutoMission.isReady = true;
         StartCoroutine(SetTaskText(task04));
-        
 
-    }
 
-    public void task04Complete()
-    {
-        tasksTexts.text = "";
-        StartCoroutine (SetTaskText(task05));
-        StartCoroutine(SetDialogueText(taskDialogue02));
     }
 
     public void task05Complete()
@@ -111,6 +103,8 @@ public class TasksTutoManager : MonoBehaviour
 
         tasksTexts.text = "";
         StartCoroutine(SetTaskText(task06));
+        StartCoroutine(SetDialogueText(taskDialogue02));
+
     }
 
     public void task06Complete()
@@ -126,6 +120,7 @@ public class TasksTutoManager : MonoBehaviour
         tasksTexts.text = "";
         soldierTutoMission.ourTask = MissionScript.tasks.task07;
         soldierTutoMission.isReady = true;
+        StopCoroutine(SetTaskText(task07));
         StartCoroutine(SetTaskText(task07));
     }
 

@@ -51,8 +51,6 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         RotateCamera();
-        tiempoTranscurrido += Time.deltaTime;
-        Zoom();
 
     }
 
@@ -107,58 +105,5 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OnFire(InputAction.CallbackContext context)
-    {
-        if (context.performed && isReadyToFire)
-        {
-            if (tiempoTranscurrido >= gunRoot.GetComponentInChildren<Weapon>().cadencia)
-            {
-                tiempoTranscurrido = 0;
-                Debug.DrawLine(firePoint.position, firePoint.forward * 10f, Color.red);
-                Debug.DrawLine(Camera.main.transform.position, Camera.main.transform.forward * 10f, Color.blue);
-                RaycastHit cameraHit;
-
-                if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out cameraHit))
-                {
-                    Vector3 shootDirection = cameraHit.point - firePoint.position;
-                    firePoint.rotation = Quaternion.LookRotation(shootDirection);
-
-                    GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(shootDirection));
-                    bullet.GetComponent<BulletScript>().tipoArma = gunRoot.GetComponentInChildren<Weapon>().type.ToString();
-                    Rigidbody rb = bullet.GetComponent<Rigidbody>();
-                    rb.AddForce(bullet.transform.forward * bulletSpeed, ForceMode.Impulse);
-                }
-            }
-            
-        }
-    }
-
-    private void Zoom()
-    {
-        if(isReadyToFire)
-        {
-            if (Input.GetKey(KeyCode.LeftControl)) 
-            {
-                // Incrementa el tiempo de interpolación
-                currentLerpTime += Time.deltaTime;
-                if (currentLerpTime > lerpTime)
-                {
-                    currentLerpTime = lerpTime;
-                }
-
-                // Cambia el FOV suavemente hacia el valor deseado
-                float fov = Mathf.Lerp(normalFOV, changedFOV, currentLerpTime / lerpTime);
-                virtualCamera.m_Lens.FieldOfView = fov;
-            }
-            else
-            {
-                // Restablece el tiempo de interpolación
-                currentLerpTime = 0f;
-
-                // Vuelve al FOV normal suavemente
-                float fov = Mathf.Lerp(virtualCamera.m_Lens.FieldOfView, normalFOV, Time.deltaTime * lerpTime * 2);
-                virtualCamera.m_Lens.FieldOfView = fov;
-            }
-        }
-    }
+    
 }

@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class InteractableItem : MonoBehaviour
 {
+    public GameObject ObjetoEncendido;
+
+   
     public enum typeItem
     {
         Gun,
         SoldierTuto,
     }
-
-    public typeItem item;
+    
+     public typeItem item;
+   
+    
 }

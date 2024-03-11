@@ -28,13 +28,23 @@ public class RaycastDetector : MonoBehaviour
             if (hitInteractable.item == InteractableItem.typeItem.Gun)
             {
                 textObject.text = "Press " + interactKey + " to take a pistol";
-                
+
                 if (Input.GetKeyDown(interactKey))
+
                 {
-                    hit.collider.gameObject.transform.parent = gunRoot;
-                    hit.collider.transform.localPosition = Vector3.zero;
-                    hit.collider.transform.rotation = gunRoot.transform.parent.rotation;
-                    playerController.isReadyToFire = true;
+                    if (hitInteractable.ObjetoEncendido != null)
+                    {
+                        hitInteractable.ObjetoEncendido.SetActive(true);
+                        FindObjectOfType<WeaponManager>().inactive = false;
+                    }
+                    else
+                    {
+                        Debug.LogError("no tengo objeto que encender");
+                    }
+                    // hit.collider.gameObject.transform.parent = gunRoot;
+                    // hit.collider.transform.localPosition = Vector3.zero;
+                    // hit.collider.transform.rotation = gunRoot.transform.parent.rotation;
+
 
                     if (hitMission != null && hitMission.isTuto && hitMission.ourTask == MissionScript.tasks.task02 && hitMission.isReady)
                     {
@@ -42,9 +52,9 @@ public class RaycastDetector : MonoBehaviour
                         hitMission.isReady = false;
                     }
                 }
-                
+
             }
-            else if(hitInteractable.item == InteractableItem.typeItem.SoldierTuto)
+            else if (hitInteractable.item == InteractableItem.typeItem.SoldierTuto)
             {
                 textObject.text = "Press " + interactKey + " to speak with sargeant";
 
@@ -58,7 +68,7 @@ public class RaycastDetector : MonoBehaviour
                 }
             }
         }
-        
+
         else
         {
             textObject.text = "";

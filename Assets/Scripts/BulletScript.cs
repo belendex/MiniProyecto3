@@ -7,6 +7,7 @@ public class BulletScript : MonoBehaviour
     public Material redMat;
     public Material greenMat;
     public TasksTutoManager tutoManager;
+    public string tipoArma;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,14 @@ public class BulletScript : MonoBehaviour
             collision.gameObject.GetComponent<MeshRenderer>().material = greenMat;
             if(tutoManager != null)
             {
-                tutoManager.task03Complete();
+                if(tipoArma == "Pistol")
+                {
+                    tutoManager.task03Complete();
+                }
+                else if (tipoArma=="Rifle")
+                {
+                    tutoManager.task06Complete();
+                }
             }
         }
         Destroy(gameObject);

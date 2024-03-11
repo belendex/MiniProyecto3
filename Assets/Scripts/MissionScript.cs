@@ -12,6 +12,7 @@ public class MissionScript : MonoBehaviour
         task04, 
         task05, 
         task06,
+        task07,
     }
 
     public tasks ourTask;

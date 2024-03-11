@@ -10,16 +10,23 @@ public class TasksTutoManager : MonoBehaviour
     private string task02 = "Recoge tu arma del mostrador";
     private string task03 = "Elimina todos los objetivos";
     private string task04 = "Habla con el sargento de nuevo";
-    private string task05 = "Sal del campo de tiro";
+    private string task05 = "Prueba con esta otra arma";
+    private string task06 = "Vuelve a destruir todos los objetivos";
+    private string task07 = "Habla con el sargento para acabar";
+    private string task08 = "Sal del campo de tiro";
 
     //TASKS DIALOGUE
     private string taskDialogue01 = "Soldado este es el campo de tiro, arriba tiene un panel que le irá guiando. ¡NO HAGA EL RIDÍCULO SOLDADO!";
-    private string taskDialogue02 = "Ha finalizado el entrenamiento, salga de aquí y prepárese para el despliegue. Recuerda, ¡el mundo le obseva!";
+    private string taskDialogue02 = "Muy bien, ahora prueba con esta otra arma. Tiene mas cadencia pero menos precisión. Prueba a apuntar";
+    private string taskDialogue03 = "Ha finalizado el entrenamiento, salga de aquí y prepárese para el despliegue. Recuerda, ¡el mundo le obseva!";
 
     public TextMeshProUGUI tasksTexts;
     public TextMeshProUGUI dialogueText;
     public MeshRenderer[] objetives;
     public Material hitMaterial;
+    public Material noHitMaterial;
+
+    [SerializeField] private MissionScript soldierTutoMission;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,24 +78,60 @@ public class TasksTutoManager : MonoBehaviour
 
     public void task03Complete()
     {
-        bool isAllHit = false;
         foreach(MeshRenderer i in objetives)
         {
-            if(i.sharedMaterial == hitMaterial)
+            if(i.sharedMaterial != hitMaterial)
             {
-                isAllHit = true;
-            }
-            else
-            {
-                isAllHit = false;
+                return;
             }
         }
 
-        if(isAllHit)
+        tasksTexts.text = "";
+        soldierTutoMission.ourTask = MissionScript.tasks.task04;
+        soldierTutoMission.isReady = true;
+        StartCoroutine(SetTaskText(task04));
+        
+
+    }
+
+    public void task04Complete()
+    {
+        tasksTexts.text = "";
+        StartCoroutine (SetTaskText(task05));
+        StartCoroutine(SetDialogueText(taskDialogue02));
+    }
+
+    public void task05Complete()
+    {
+        foreach (MeshRenderer i in objetives)
         {
-            tasksTexts.text = "";
-            StartCoroutine(SetTaskText(task04));
+            i.material = noHitMaterial;
         }
 
+        tasksTexts.text = "";
+        StartCoroutine(SetTaskText(task06));
+    }
+
+    public void task06Complete()
+    {
+        foreach (MeshRenderer i in objetives)
+        {
+            if (i.sharedMaterial != hitMaterial)
+            {
+                return;
+            }
+        }
+
+        tasksTexts.text = "";
+        soldierTutoMission.ourTask = MissionScript.tasks.task07;
+        soldierTutoMission.isReady = true;
+        StartCoroutine(SetTaskText(task07));
+    }
+
+    public void task07Complete()
+    {
+        tasksTexts.text = "";
+        StartCoroutine(SetTaskText(task08));
+        StartCoroutine(SetDialogueText(taskDialogue03));
     }
 }

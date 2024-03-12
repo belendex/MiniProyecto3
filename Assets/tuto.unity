@@ -10513,6 +10513,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: da3d1f2d4d38ebc409e431f2d1016b7a, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 13937acc7fb646147aa9a02851099f0b, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14414,7 +14418,7 @@ MonoBehaviour:
   isReadyToFire: 0
   gunRoot: {fileID: 1339836793}
   animator: {fileID: 781705949}
-  isZoom: 0
+  isZoom: 1
 --- !u!114 &1948064007
 MonoBehaviour:
   m_ObjectHideFlags: 0

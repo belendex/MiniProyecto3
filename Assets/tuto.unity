@@ -11081,6 +11081,7 @@ MonoBehaviour:
   normalFOV: 45
   changedFOV: 30
   lerpTime: 0.8
+  isZoom: 0
   gunRoot: {fileID: 1339836793}
   type: 1
 --- !u!1 &1531706797
@@ -11469,7 +11470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 93.64172, y: 27.477295}
+  m_AnchoredPosition: {x: 93.6416, y: 27.477295}
   m_SizeDelta: {x: 150, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1619439252
@@ -13500,6 +13501,7 @@ MonoBehaviour:
   normalFOV: 45
   changedFOV: 30
   lerpTime: 0.8
+  isZoom: 0
   gunRoot: {fileID: 1339836793}
   type: 0
 --- !u!82 &1897688862
@@ -14411,11 +14413,8 @@ MonoBehaviour:
   bulletSpeed: 50
   isReadyToFire: 0
   gunRoot: {fileID: 1339836793}
-  virtualCamera: {fileID: 1708251376}
-  normalFOV: 45
-  changedFOV: 30
-  lerpTime: 0.8
   animator: {fileID: 781705949}
+  isZoom: 0
 --- !u!114 &1948064007
 MonoBehaviour:
   m_ObjectHideFlags: 0

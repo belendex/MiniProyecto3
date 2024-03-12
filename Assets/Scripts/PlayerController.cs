@@ -32,14 +32,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject gunRoot;
     private float tiempoTranscurrido = 0f;
 
-    //SETTINGS PARA HACERG EL ZOOM
-    public CinemachineVirtualCamera virtualCamera;
-    public float normalFOV = 45f; // FOV normal
-    public float changedFOV = 30f; // FOV cuando se presiona el control
-    public float lerpTime = .8f; // Tiempo para alcanzar el FOV cambiado
 
     private float currentLerpTime;
     public Animator animator;
+    public bool isZoom= false;
     // Start is called before the first frame update
     void Start()
     {
@@ -96,8 +92,16 @@ public class PlayerController : MonoBehaviour
         pitch -= speedV * UnityEngine.Input.GetAxis("Mouse Y");
 
         pitch = Mathf.Clamp(pitch, -40f, 40f);
-        
-      //  transform.eulerAngles= new Vector3 (0f, yaw, 0f);
+
+        if (isZoom==true)
+        {
+            transform.eulerAngles= new Vector3 (0f, yaw, 0f);
+
+        }
+        else
+        {
+            CinemachineCameraTarget.transform.eulerAngles = new Vector3 (0f,yaw, 0f);
+        }
         CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(pitch,0f , 0f);
     }
 

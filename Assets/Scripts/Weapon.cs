@@ -27,7 +27,7 @@ public class Weapon : MonoBehaviour
     public float changedFOV = 30f; // FOV cuando se presiona el control
     public float lerpTime = .8f; // Tiempo para alcanzar el FOV cambiado
     private float currentLerpTime;
-
+   public  bool isZoom = false;
     [SerializeField] private GameObject gunRoot;
     private float tiempoTranscurrido = 0f;
     public enum typeweapon
@@ -94,6 +94,7 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse1))
         {
+            isZoom = true;
             // Incrementa el tiempo de interpolación
             currentLerpTime += Time.deltaTime;
             if (currentLerpTime > lerpTime)
@@ -109,7 +110,7 @@ public class Weapon : MonoBehaviour
         {
             // Restablece el tiempo de interpolación
             currentLerpTime = 0f;
-
+            isZoom = false;
             // Vuelve al FOV normal suavemente
             float fov = Mathf.Lerp(virtualCamera.m_Lens.FieldOfView, normalFOV, Time.deltaTime * lerpTime * 2);
             virtualCamera.m_Lens.FieldOfView = fov;

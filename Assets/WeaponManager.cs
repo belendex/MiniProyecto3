@@ -10,11 +10,12 @@ public class WeaponManager : MonoBehaviour
     public bool inactive;
     public Image ammoImg;
     public Image ammoImgFill;
-
+   
+    private PlayerController playerController;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerController = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -38,6 +39,21 @@ public class WeaponManager : MonoBehaviour
         if (scroll != 0) { 
             ChangeWeapon(scroll);
         }
+    }
+    public void checkZoom()
+    {
+        foreach (var item in weapons)
+        {
+            if (item.GetComponent<Weapon>().isZoom==true)
+            {
+                playerController.isZoom = true;
+            }
+            else
+            {
+                playerController.isZoom = false;
+            }
+        }
+        
     }
     public void ChangeWeapon(float scrollDirection)
     {

@@ -41,6 +41,8 @@ public class TasksTutoManager : MonoBehaviour
 
     IEnumerator SetTaskText(string text)
     {
+        tasksTexts.text = "";
+
         foreach (char c in text)
         {
             tasksTexts.text = tasksTexts.text + c;
@@ -86,9 +88,9 @@ public class TasksTutoManager : MonoBehaviour
             }
         }
         tasksTexts.text = "";
-        StopCoroutine(SetTaskText(task04));
         soldierTutoMission.ourTask = MissionScript.tasks.task04;
         soldierTutoMission.isReady = true;
+        StopCoroutine(SetTaskText(task04));
         StartCoroutine(SetTaskText(task04));
 
 

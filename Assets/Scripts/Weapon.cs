@@ -2,12 +2,20 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
 
     public float cadencia;
     public float damage;
+    public int maxAmmo;
+    private int currentAmmo;
+    [SerializeField] private Image ammoImg;
+
+    private AudioSource aSource;
+    [SerializeField] private AudioClip reloadClip;
+    [SerializeField] private AudioClip shootClip;
 
     public Transform firePoint; // Punto de disparo
     public GameObject bulletPrefab; // Prefab de la bala
@@ -29,22 +37,36 @@ public class Weapon : MonoBehaviour
     }
     public typeweapon type;
 
+    private void Start()
+    {
+        currentAmmo = maxAmmo;
+        UpdateAmmoUI();
+        aSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         tiempoTranscurrido += Time.deltaTime;
 
         if (Input.GetButtonDown("Fire1"))
         {
-
             OnFire();
-
+        }
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(Reload());
         }
         Zoom();
     }
 
+    private void OnEnable()
+    {
+        UpdateAmmoUI();
+    }
+
     public void OnFire()
     {
-        if (tiempoTranscurrido >= this.cadencia)
+        if (tiempoTranscurrido >= this.cadencia && currentAmmo > 0)
         {
             tiempoTranscurrido = 0;
             Debug.DrawLine(firePoint.position, firePoint.forward * 10f, Color.red);
@@ -60,6 +82,9 @@ public class Weapon : MonoBehaviour
                 bullet.GetComponent<BulletScript>().tipoArma = this.type.ToString();
                 Rigidbody rb = bullet.GetComponent<Rigidbody>();
                 rb.AddForce(bullet.transform.forward * bulletSpeed, ForceMode.Impulse);
+                aSource.PlayOneShot(shootClip);
+                currentAmmo--;
+                UpdateAmmoUI();
             }
         }
 
@@ -89,5 +114,21 @@ public class Weapon : MonoBehaviour
             float fov = Mathf.Lerp(virtualCamera.m_Lens.FieldOfView, normalFOV, Time.deltaTime * lerpTime * 2);
             virtualCamera.m_Lens.FieldOfView = fov;
         }
+    }
+
+    void UpdateAmmoUI()
+    {
+        float fillAmount = (float)this.currentAmmo / this.maxAmmo;
+        ammoImg.fillAmount = fillAmount;
+    }
+
+    IEnumerator Reload()
+    {
+        currentAmmo = 0;
+        aSource.clip = reloadClip;
+        aSource.Play();
+        yield return new WaitForSeconds(2);
+        currentAmmo = maxAmmo;
+        UpdateAmmoUI();
     }
 }

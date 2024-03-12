@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponManager : MonoBehaviour
 {
     public int currentIndex;
     public GameObject[] weapons;
     public bool inactive;
+    public Image ammoImg;
+    public Image ammoImgFill;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +21,18 @@ public class WeaponManager : MonoBehaviour
     void Update()
     {   if (inactive== true)
         {
+            ammoImg.enabled = false;
+            ammoImgFill.enabled = false;
             //return nos servirá para cortar la ejecución aquí siempre y cuando inactive sea true
             return;
+        }
+        else
+        {
+            if(ammoImg.enabled == false)
+            {
+                ammoImg.enabled = true;
+                ammoImgFill.enabled = true;
+            }
         }
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (scroll != 0) { 

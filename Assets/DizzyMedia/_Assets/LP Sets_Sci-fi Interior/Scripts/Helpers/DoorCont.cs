@@ -19,7 +19,7 @@ public class DoorCont : MonoBehaviour {
     [Header("References")]
     
     [Space]
-    
+    public string comandoRequerido = "abrir";
     public BoxCollider doorTrigger;
     public MeshRenderer doorLights;
     public MeshRenderer doorPanel;
@@ -95,8 +95,21 @@ public class DoorCont : MonoBehaviour {
         }//!locked
         
     }//OnTriggerEnter    
+   // public void AbrirPuertaEspecial()
+   // {
+       // if (gameObject.CompareTag("PuertaEspecial"))
+       // {
+            // Aquí puedes agregar la lógica específica para abrir la puerta especial
+           // Debug.Log("¡Esta es una puerta especial! Realiza la acción necesaria.");
+            //if (jugadorEnRango && Input.GetKeyDown(KeyCode.Return))
 
-    private void OnTriggerStay(Collider other) {
+
+            // Por ejemplo, puedes cambiar el estado de animación de la puerta especial
+            // o activar/desactivar un componente específico, según lo que necesites.
+       // }
+   // }
+
+private void OnTriggerStay(Collider other) {
         
         if(!locked){
         

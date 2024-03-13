@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4185870670130480349}
   m_Layer: 0
   m_Name: bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,3 +262,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redMat: {fileID: 2100000, guid: 464282f40ec7e3f46bb505c272b91da9, type: 2}
   greenMat: {fileID: 2100000, guid: c49df09d0072e0a458e690d6e0734072, type: 2}
+  tutoManager: {fileID: 0}
+  tipoArma: 

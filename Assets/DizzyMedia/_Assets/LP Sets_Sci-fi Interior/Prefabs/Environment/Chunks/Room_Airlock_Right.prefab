@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: 126363143568374325}
   m_Layer: 0
   m_Name: wall ground light
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1823,7 +1823,7 @@ GameObject:
   - component: {fileID: 126363144300451002}
   m_Layer: 0
   m_Name: Wall_Type1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2267,7 +2267,7 @@ GameObject:
   - component: {fileID: 126363144851961523}
   m_Layer: 0
   m_Name: Wall_Type2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2458,7 +2458,7 @@ GameObject:
   - component: {fileID: 858618650405866460}
   m_Layer: 0
   m_Name: Wall_Type1_Holder (green)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2490,7 +2490,7 @@ GameObject:
   - component: {fileID: 858618650999875008}
   m_Layer: 0
   m_Name: 'Wall_Type2_Holder '
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2522,7 +2522,7 @@ GameObject:
   - component: {fileID: 858618652309758171}
   m_Layer: 0
   m_Name: Wall_Type2_Holder
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2805,7 +2805,7 @@ GameObject:
   - component: {fileID: 8195143536524208701}
   m_Layer: 0
   m_Name: Wall External Cornerfill
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3212,7 +3212,7 @@ GameObject:
   - component: {fileID: 1340369661337132019}
   m_Layer: 0
   m_Name: Wall_Internal_Holder
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3445,7 +3445,7 @@ GameObject:
   - component: {fileID: 4928007033416528307}
   m_Layer: 0
   m_Name: Wall_Type2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4215,7 +4215,7 @@ GameObject:
   - component: {fileID: 4928007033563166420}
   m_Layer: 0
   m_Name: wall ground light
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4462,7 +4462,7 @@ GameObject:
   - component: {fileID: 4928007033612874157}
   m_Layer: 0
   m_Name: Wall_Type1_Holder (green)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4787,7 +4787,7 @@ GameObject:
   - component: {fileID: 4928007033647889729}
   m_Layer: 0
   m_Name: Wall_Type2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4978,7 +4978,7 @@ GameObject:
   - component: {fileID: 4928007033685497321}
   m_Layer: 0
   m_Name: 'Wall_Type2_Holder '
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5410,7 +5410,7 @@ GameObject:
   - component: {fileID: 4928007033720362982}
   m_Layer: 0
   m_Name: wall ground light
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5931,7 +5931,7 @@ GameObject:
   - component: {fileID: 4928007033803781505}
   m_Layer: 0
   m_Name: Wall_Type2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6042,7 +6042,7 @@ GameObject:
   - component: {fileID: 4928007033823346021}
   m_Layer: 0
   m_Name: Wall_Type1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6237,7 +6237,7 @@ GameObject:
   - component: {fileID: 4928007033837606776}
   m_Layer: 0
   m_Name: Wall_Type2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6515,7 +6515,7 @@ GameObject:
   - component: {fileID: 4928007033913942820}
   m_Layer: 0
   m_Name: Wall External Cornerfill
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6890,7 +6890,7 @@ GameObject:
   - component: {fileID: 4928007033991113042}
   m_Layer: 0
   m_Name: 'Wall_Type2_Holder '
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7665,7 +7665,7 @@ GameObject:
   - component: {fileID: 4928007034148155031}
   m_Layer: 0
   m_Name: Wall_Type1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7860,7 +7860,7 @@ GameObject:
   - component: {fileID: 4928007034168456740}
   m_Layer: 0
   m_Name: Wall_Type2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8322,7 +8322,7 @@ GameObject:
   - component: {fileID: 4928007034218598712}
   m_Layer: 0
   m_Name: 'Wall_Type2_Holder '
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8440,7 +8440,7 @@ GameObject:
   - component: {fileID: 4928007034251559013}
   m_Layer: 0
   m_Name: Wall_Type2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8631,7 +8631,7 @@ GameObject:
   - component: {fileID: 4928007034290453550}
   m_Layer: 0
   m_Name: 'Wall_Type2_Holder '
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8956,7 +8956,7 @@ GameObject:
   - component: {fileID: 4928007034311372502}
   m_Layer: 0
   m_Name: Wall_Type2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9064,7 +9064,7 @@ GameObject:
   - component: {fileID: 4928007034317827764}
   m_Layer: 0
   m_Name: 'Wall_Type2_Holder '
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9701,7 +9701,7 @@ GameObject:
   - component: {fileID: 4928007034378414407}
   m_Layer: 0
   m_Name: Wall External Cornerfill
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9987,7 +9987,7 @@ GameObject:
   - component: {fileID: 4928007034433989720}
   m_Layer: 0
   m_Name: Wall_Type1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10453,7 +10453,7 @@ GameObject:
   - component: {fileID: 4928007034486952541}
   m_Layer: 0
   m_Name: Wall_Type2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10729,7 +10729,7 @@ GameObject:
   - component: {fileID: 4928007034497968344}
   m_Layer: 0
   m_Name: wall ground light
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10810,7 +10810,7 @@ GameObject:
   - component: {fileID: 4928007034501818541}
   m_Layer: 0
   m_Name: 'Wall_Type2_Holder '
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10844,7 +10844,7 @@ GameObject:
   - component: {fileID: 4928007034531354430}
   m_Layer: 0
   m_Name: wall ground light
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11527,7 +11527,7 @@ GameObject:
   - component: {fileID: 4928007034636175191}
   m_Layer: 0
   m_Name: wall ground light
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11962,7 +11962,7 @@ GameObject:
   - component: {fileID: 4928007034714054242}
   m_Layer: 0
   m_Name: Wall_Type1_Holder (green)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12182,7 +12182,7 @@ GameObject:
   - component: {fileID: 4928007034778584303}
   m_Layer: 0
   m_Name: 'Wall_Type2_Holder '
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12412,7 +12412,7 @@ GameObject:
   - component: {fileID: 4928007034857034269}
   m_Layer: 0
   m_Name: 'Wall_Type2_Holder '
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12966,7 +12966,7 @@ GameObject:
   - component: {fileID: 4928007034902874392}
   m_Layer: 0
   m_Name: wall ground light
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13238,7 +13238,7 @@ GameObject:
   - component: {fileID: 4928007034943793793}
   m_Layer: 0
   m_Name: Wall_Type2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14152,7 +14152,7 @@ GameObject:
   - component: {fileID: 4928007035169443308}
   m_Layer: 0
   m_Name: wall ground light
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14558,7 +14558,7 @@ GameObject:
   - component: {fileID: 4928007035260357468}
   m_Layer: 0
   m_Name: wall ground light
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14725,7 +14725,7 @@ GameObject:
   - component: {fileID: 4928007035304751537}
   m_Layer: 0
   m_Name: Wall_Type2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14833,7 +14833,7 @@ GameObject:
   - component: {fileID: 4928007035312401861}
   m_Layer: 0
   m_Name: Wall_Type1_Holder (green)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14988,7 +14988,7 @@ GameObject:
   - component: {fileID: 4928007035368589826}
   m_Layer: 0
   m_Name: 'Wall_Type2_Holder '
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15022,7 +15022,7 @@ GameObject:
   - component: {fileID: 4928007035395581712}
   m_Layer: 0
   m_Name: wall ground light
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15210,7 +15210,7 @@ GameObject:
   - component: {fileID: 4928007035409406082}
   m_Layer: 0
   m_Name: wall ground light
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15492,7 +15492,7 @@ GameObject:
   - component: {fileID: 2803547506558221939}
   m_Layer: 0
   m_Name: Wall Internal
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15617,6 +15617,7 @@ Transform:
   - {fileID: 1761416795855212264}
   - {fileID: 3512375891911653040}
   - {fileID: 1370924444629096432}
+  - {fileID: 623389741894733867}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5997067895563009161
@@ -16260,7 +16261,7 @@ GameObject:
   - component: {fileID: 5997067896908981967}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16417,7 +16418,7 @@ GameObject:
   - component: {fileID: 7889045931098615998}
   m_Layer: 0
   m_Name: WallLight
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16592,3 +16593,73 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999976, y: 1, z: 0.99999976}
   m_Center: {x: 0.00006103514, y: 0, z: -0.0001220703}
+--- !u!1001 &1093249735730362304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5997067895480266326}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.547
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.491
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.102
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4852742
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.87436205
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -121.939
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+      propertyPath: m_Name
+      value: pistola
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+--- !u!4 &623389741894733867 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dd80cdf55660726468349ca918a0436f, type: 3}
+  m_PrefabInstance: {fileID: 1093249735730362304}
+  m_PrefabAsset: {fileID: 0}

@@ -9,6 +9,9 @@ public class scr : MonoBehaviour
     public float acceleration = 2f;
     public float rotationSpeed = 90f; // Velocidad de rotación en grados por segundo
     public float delayBeforeNextPoint = 1f; // Retraso antes de moverse al siguiente punto
+    
+    
+    
     private Vector3 targetPosition;
     private float currentSpeed = 0f;
     private float delayTimer = 0f;
@@ -68,4 +71,6 @@ public class scr : MonoBehaviour
         // Rotamos gradualmente el objeto hacia el punto de destino
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
+
+    
 }

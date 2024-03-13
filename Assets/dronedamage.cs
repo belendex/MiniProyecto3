@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dronedamage : MonoBehaviour
+public class Enemydamage : MonoBehaviour
 { 
     public int damage;
     private AudioSource Asource;

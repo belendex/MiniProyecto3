@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class DamageReal : MonoBehaviour
+public class damageDealt: MonoBehaviour
 {
     public int damage;
+    private AudioSource Asource;
+    public AudioClip Droneclip;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        Asource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,10 +21,12 @@ public class DamageReal : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        life vidaPersonaje = other.GetComponent<life>();
-        if (vidaPersonaje != null)
+        if (other.CompareTag("Player"))
         {
-            vidaPersonaje.Takedamage(damage);
+            Asource.PlayOneShot(Droneclip);
+            other.GetComponent<life>().Takedamage(damage);
+
+
         }
     }
 }

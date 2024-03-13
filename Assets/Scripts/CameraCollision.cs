@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class CameraCollision : MonoBehaviour
 {
-    private float minDistance = .5f;
+    private float minDistance = .2f;
     private float maxDistance = 3f;
-    private float suavidad = 20f;
+    private float suavidad = 25f;
     private float distancia;
 
     Vector3 direction;

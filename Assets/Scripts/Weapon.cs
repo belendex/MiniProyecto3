@@ -86,6 +86,20 @@ public class Weapon : MonoBehaviour
                 currentAmmo--;
                 UpdateAmmoUI();
             }
+            else
+            {
+                // Dispara en la dirección hacia donde la cámara está mirando, incluso si no hay colisión.
+                Vector3 targetDirection = Camera.main.transform.forward;
+                firePoint.rotation = Quaternion.LookRotation(targetDirection);
+
+                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(targetDirection));
+                bullet.GetComponent<BulletScript>().tipoArma = this.type.ToString();
+                Rigidbody rb = bullet.GetComponent<Rigidbody>();
+                rb.AddForce(targetDirection * bulletSpeed, ForceMode.Impulse);
+                //aSource.PlayOneShot(shootClip);
+                currentAmmo--;
+                UpdateAmmoUI();
+            }
         }
 
     }

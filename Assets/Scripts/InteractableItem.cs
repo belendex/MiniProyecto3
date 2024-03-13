@@ -11,6 +11,7 @@ public class InteractableItem : MonoBehaviour
     {
         Gun,
         SoldierTuto,
+        PCtuto,
     }
     
      public typeItem item;

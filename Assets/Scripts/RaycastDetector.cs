@@ -13,6 +13,7 @@ public class RaycastDetector : MonoBehaviour
     public TasksTutoManager tutoManager;
     public PlayerController playerController;
     [SerializeField] private GameObject weapons;
+    [SerializeField] private FadeController fadeController;
 
     private void Update()
     {
@@ -87,6 +88,14 @@ public class RaycastDetector : MonoBehaviour
                         tutoManager.task07Complete();
                         hitMission.isReady = false;
                     }
+                }
+            }
+            else if(hitInteractable.item == InteractableItem.typeItem.PCtuto)
+            {
+                textObject.text = "Press " + interactKey + " to end training";
+                if (Input.GetKeyDown(interactKey))
+                {
+                    fadeController.FadeOut();
                 }
             }
         }

@@ -256,7 +256,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7109682863142759299}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b785513ad0c521442b12b4eb9e03b8cb, type: 3}
   m_Name: 
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7109682863142759299}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d59b6793dfef2c449a9c4ea97f30f70, type: 3}
   m_Name: 
@@ -277,3 +277,4 @@ MonoBehaviour:
   greenMat: {fileID: 2100000, guid: c49df09d0072e0a458e690d6e0734072, type: 2}
   tutoManager: {fileID: 0}
   tipoArma: 
+  damage: 25

@@ -73,11 +73,13 @@ public class Weapon : MonoBehaviour
             Debug.DrawLine(Camera.main.transform.position, Camera.main.transform.forward * 10f, Color.blue);
             RaycastHit cameraHit;
 
+            
+            
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out cameraHit))
             {
                 Vector3 shootDirection = cameraHit.point - firePoint.position;
                 firePoint.rotation = Quaternion.LookRotation(shootDirection);
-
+                Debug.Log("Punto Dis " + firePoint.position);
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(shootDirection));
                 bullet.GetComponent<BulletScript>().tipoArma = this.type.ToString();
                 Rigidbody rb = bullet.GetComponent<Rigidbody>();

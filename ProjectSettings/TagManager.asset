@@ -12,6 +12,7 @@ TagManager:
   - Obstacle
   - puertaEspecial
   - Teleport
+  - Health
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ using UnityEngine;
 public class DamageReal : MonoBehaviour
 {
     public int damage;
+    public GameObject particles;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,11 @@ public class DamageReal : MonoBehaviour
         if (vidaPersonaje != null)
         {
             vidaPersonaje.Takedamage(damage);
-            Destroy(gameObject,2f);
+            if(particles != null)
+            {
+                particles.SetActive(true);
+            }
+            Destroy(gameObject,0.5f);
         }
     }
 }

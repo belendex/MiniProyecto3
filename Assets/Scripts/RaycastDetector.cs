@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RaycastDetector : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class RaycastDetector : MonoBehaviour
     public PlayerController playerController;
     [SerializeField] private GameObject weapons;
     [SerializeField] private FadeController fadeController;
+
+    public GameObject nave;
 
     private void Update()
     {
@@ -96,6 +99,22 @@ public class RaycastDetector : MonoBehaviour
                 if (Input.GetKeyDown(interactKey))
                 {
                     fadeController.FadeOut();
+                }
+            }
+            else if(hitInteractable.item == InteractableItem.typeItem.EndGame) 
+            {
+                textObject.text = "Press " + interactKey + " interact";
+                if (Input.GetKeyDown(interactKey))
+                {
+                    nave.SetActive(true) ;
+                }
+            }
+            else if(hitInteractable.item == InteractableItem.typeItem.Nave)
+            {
+                textObject.text = "Press " + interactKey + " to end";
+                if (Input.GetKeyDown(interactKey))
+                {
+                    SceneManager.LoadScene("MainMenu");
                 }
             }
         }

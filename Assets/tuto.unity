@@ -2325,6 +2325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f79d0692c62e394e81d2f922e0a6fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
 --- !u!1 &309845924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2909,6 +2910,7 @@ MonoBehaviour:
   - {fileID: 1835436360}
   hitMaterial: {fileID: 2100000, guid: c49df09d0072e0a458e690d6e0734072, type: 2}
   noHitMaterial: {fileID: 0}
+  buttonExit: {fileID: 0}
   soldierTutoMission: {fileID: 717921386}
 --- !u!1001 &415666728
 PrefabInstance:
@@ -7622,7 +7624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cf89cdfa40848114cad8183cfa125180, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9325,7 +9327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1364308672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9381,7 +9383,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c49df09d0072e0a458e690d6e0734072, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -47,19 +47,19 @@ public class enemyZombie : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-   // {
-      //  if (other.CompareTag("bullet"))
-      //  {
-           // int dmg = other.gameObject.GetComponent<BulletScript>().damage;
-           // life = life - dmg;
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("bullet"))
+        {
+            int dmg = other.gameObject.GetComponent<BulletScript>().damage;
+            life = life - dmg;
 
-           // if (life < 0)
-            //{
-            //    particles.SetActive(true);
-             //   Destroy(gameObject, 1.7f);
-            //}
-       // }
-    //}
+            if (life < 0)
+            {
+                particles.SetActive(true);
+                Destroy(gameObject, 1.7f);
+            }
+        }
+    }
 }
 

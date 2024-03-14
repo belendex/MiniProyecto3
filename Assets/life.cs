@@ -33,4 +33,11 @@ public class life : MonoBehaviour
         }
     }
 
+    public void TakeHealth()
+    {
+        currentHealth = startingHealth;
+        UIManager.Instance.SetHealthBar(currentHealth, startingHealth);
+
+    }
+
 }

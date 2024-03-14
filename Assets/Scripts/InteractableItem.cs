@@ -12,6 +12,8 @@ public class InteractableItem : MonoBehaviour
         Gun,
         SoldierTuto,
         PCtuto,
+        EndGame,
+        Nave,
     }
     
      public typeItem item;

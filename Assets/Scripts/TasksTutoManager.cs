@@ -24,6 +24,7 @@ public class TasksTutoManager : MonoBehaviour
     public MeshRenderer[] objetives;
     public Material hitMaterial;
     public Material noHitMaterial;
+    public GameObject buttonExit;
 
     [SerializeField] private MissionScript soldierTutoMission;
     // Start is called before the first frame update
@@ -131,5 +132,6 @@ public class TasksTutoManager : MonoBehaviour
         tasksTexts.text = "";
         StartCoroutine(SetTaskText(task08));
         StartCoroutine(SetDialogueText(taskDialogue03));
+        buttonExit.SetActive(true);
     }
 }

@@ -6,6 +6,8 @@ public class enemyZombie : MonoBehaviour
     public string tagObstaculo = "Obstacle"; // Tag del obstáculo
     public float distanciaMinima = 5f;
     public float velocidadMovimiento = 3f;
+    public float minY = 0f; // Límite mínimo en el eje Y
+    public float maxY = 10f; // Límite máximo en el eje Y
 
     private Transform jugador;
 
@@ -33,6 +35,10 @@ public class enemyZombie : MonoBehaviour
                     return;
                 }
             }
+
+            // Restringe el movimiento vertical
+            float newY = Mathf.Clamp(transform.position.y, minY, maxY);
+            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
 
             // Mover el enemigo hacia el jugador
             transform.Translate(direccion * velocidadMovimiento * Time.deltaTime);

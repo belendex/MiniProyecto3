@@ -82,7 +82,7 @@ public class Weapon : MonoBehaviour
                 bullet.GetComponent<BulletScript>().tipoArma = this.type.ToString();
                 Rigidbody rb = bullet.GetComponent<Rigidbody>();
                 rb.AddForce(bullet.transform.forward * bulletSpeed, ForceMode.Impulse);
-                //aSource.PlayOneShot(shootClip);
+                aSource.PlayOneShot(shootClip);
                 currentAmmo--;
                 UpdateAmmoUI();
             }
@@ -96,7 +96,7 @@ public class Weapon : MonoBehaviour
                 bullet.GetComponent<BulletScript>().tipoArma = this.type.ToString();
                 Rigidbody rb = bullet.GetComponent<Rigidbody>();
                 rb.AddForce(targetDirection * bulletSpeed, ForceMode.Impulse);
-                //aSource.PlayOneShot(shootClip);
+                aSource.PlayOneShot(shootClip);
                 currentAmmo--;
                 UpdateAmmoUI();
             }

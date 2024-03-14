@@ -23,6 +23,7 @@ public class DamageReal : MonoBehaviour
         if (vidaPersonaje != null)
         {
             vidaPersonaje.Takedamage(damage);
+            Destroy(gameObject,2f);
         }
     }
 }

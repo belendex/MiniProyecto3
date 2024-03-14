@@ -21,7 +21,7 @@ public class BulletScript : MonoBehaviour
     }
 
     public void OnCollisionEnter(Collision collision)
-    {
+    {   
         Debug.Log("colisioné con:"+collision.gameObject.name);
         if(collision.gameObject.CompareTag("TutoObject"))
         {
@@ -38,6 +38,10 @@ public class BulletScript : MonoBehaviour
                 }
             }
         }
-      // Destroy(gameObject);
+
+        Destroy(gameObject);
+
+
+
     }
 }

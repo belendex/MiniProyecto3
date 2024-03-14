@@ -7,7 +7,7 @@ public class TeleportScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && canTeleport ) // Comprueba si el objeto que ha entrado en el collider es el jugador y se permite teletransportar
+        if (other.CompareTag("Player") && canTeleport==true ) // Comprueba si el objeto que ha entrado en el collider es el jugador y se permite teletransportar
         {
             Debug.Log("hola");
             TeleportPlayer(other.gameObject); // Llama a la función para teletransportar al jugador

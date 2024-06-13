@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
     private int currentAmmo;
     [SerializeField] private Image ammoImg;
 
-    private AudioSource aSource;
+    public AudioSource aSource;
     [SerializeField] private AudioClip reloadClip;
     [SerializeField] private AudioClip shootClip;
 
@@ -41,7 +41,7 @@ public class Weapon : MonoBehaviour
     {
         currentAmmo = maxAmmo;
         UpdateAmmoUI();
-        aSource = GetComponent<AudioSource>();
+       // aSource = GetComponent<AudioSource>();
     }
 
     void Update()

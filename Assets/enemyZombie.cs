@@ -25,7 +25,7 @@ public class enemyZombie : MonoBehaviour
         if (distancia < distanciaMinima)
         {
             Vector3 direccion = (jugador.position - transform.position).normalized;
-
+            transform.LookAt(-jugador.position);
             // Raycast para detectar obstáculos
             RaycastHit hit;
             if (Physics.Raycast(transform.position, direccion, out hit, distanciaMinima))

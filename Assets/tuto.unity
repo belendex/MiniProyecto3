@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: fe443083390fbe64e993879b0c99444c, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: a121503749bab1e45a083c305c383802, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2326,6 +2326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  particles: {fileID: 0}
 --- !u!1 &309845924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2910,7 +2911,7 @@ MonoBehaviour:
   - {fileID: 1835436360}
   hitMaterial: {fileID: 2100000, guid: c49df09d0072e0a458e690d6e0734072, type: 2}
   noHitMaterial: {fileID: 0}
-  buttonExit: {fileID: 0}
+  buttonExit: {fileID: 1364308671}
   soldierTutoMission: {fileID: 717921386}
 --- !u!1001 &415666728
 PrefabInstance:
@@ -5271,6 +5272,7 @@ MonoBehaviour:
   playerController: {fileID: 1948064006}
   weapons: {fileID: 635039461}
   fadeController: {fileID: 1405472356}
+  nave: {fileID: 0}
 --- !u!1 &717921379 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 161332, guid: 4045ab46594095b41ad7a0f08cfd554c, type: 3}
@@ -9322,7 +9324,7 @@ GameObject:
   - component: {fileID: 1364308673}
   - component: {fileID: 1364308672}
   m_Layer: 0
-  m_Name: Cube (9)
+  m_Name: ButtonExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10443,6 +10445,7 @@ MonoBehaviour:
   damage: 10
   maxAmmo: 30
   ammoImg: {fileID: 1117922604}
+  aSource: {fileID: 1897688862}
   reloadClip: {fileID: 8300000, guid: 1fbb829f84bccec44aebc7d6527839f1, type: 3}
   shootClip: {fileID: 8300000, guid: 2afb098f7cdd3da4b985bff579a8afd3, type: 3}
   firePoint: {fileID: 916941392}
@@ -12710,6 +12713,7 @@ MonoBehaviour:
   damage: 10
   maxAmmo: 15
   ammoImg: {fileID: 1117922604}
+  aSource: {fileID: 0}
   reloadClip: {fileID: 8300000, guid: 1fbb829f84bccec44aebc7d6527839f1, type: 3}
   shootClip: {fileID: 8300000, guid: 2afb098f7cdd3da4b985bff579a8afd3, type: 3}
   firePoint: {fileID: 916941392}

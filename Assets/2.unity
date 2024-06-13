@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4660946, g: 0.46579224, b: 0.46188897, a: 1}
+  m_IndirectSpecularColor: {r: 0.46613085, g: 0.4658302, b: 0.46192676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1625,8 +1625,8 @@ MonoBehaviour:
   tagObstaculo: Obstacle
   distanciaMinima: 5
   velocidadMovimiento: 1
-  minY: 0.7
-  maxY: 1.31
+  minY: 0.5
+  maxY: 0.6
   life: 100
   particles: {fileID: 548445314}
 --- !u!65 &295619858
@@ -1709,7 +1709,7 @@ Transform:
   m_GameObject: {fileID: 295619856}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 373.794, y: 0.765, z: -634.253}
+  m_LocalPosition: {x: 373.794, y: 0.69, z: -634.675}
   m_LocalScale: {x: 0.2, y: -0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4722,13 +4722,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746043306}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.017, y: 0.029979, z: 1.21}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0.00000058114523}
+  m_LocalPosition: {x: 0, y: 0.081, z: -1.265}
   m_LocalScale: {x: 3.333333, y: 4.0185513, z: 3.333333}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 295619861}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!23 &746043309
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7734,6 +7734,8 @@ GameObject:
   - component: {fileID: 1230269514}
   - component: {fileID: 1230269513}
   - component: {fileID: 1230269516}
+  - component: {fileID: 1230269518}
+  - component: {fileID: 1230269517}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7849,6 +7851,83 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1230269517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230269512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 6812b142f2cd15340bfca94ea0c60498, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!114 &1230269518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230269512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1230269515}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!4 &1232389239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4700664121306283981, guid: 69282ec632703f74a92b2d949e19ff25, type: 3}

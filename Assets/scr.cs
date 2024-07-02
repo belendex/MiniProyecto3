@@ -11,9 +11,9 @@ public class scr : MonoBehaviour
     public float rotationSpeed = 90f; // Velocidad de rotación en grados por segundo
     public float delayBeforeNextPoint = 1f; // Retraso antes de moverse al siguiente punto
     private bool canMove = true;
-    
-    
-    
+
+
+
     private Vector3 targetPosition;
     private float currentSpeed = 0f;
     private float delayTimer = 0f;
@@ -28,7 +28,7 @@ public class scr : MonoBehaviour
 
     void Update()
     {
-        if(canMove)
+        if (canMove)
         {
             // Si hay un retraso, disminuir el temporizador
             if (delayTimer > 0f)
@@ -84,7 +84,7 @@ public class scr : MonoBehaviour
         transform.rotation = new Quaternion(0, 180, 0, 0);
         Animation animation = GetComponent<Animation>();
         animation.Play();
-
+        Invoke("ChangeScene", 3f);
     }
 
     public void ChangeScene()
@@ -92,5 +92,5 @@ public class scr : MonoBehaviour
         SceneManager.LoadScene("tuto 1");
     }
 
-    
+
 }

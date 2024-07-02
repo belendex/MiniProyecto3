@@ -14,41 +14,60 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        
-    }
-    void Start()
-    {
-        
+
     }
 
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape))
         {
-            if(panelPause.activeSelf == true)
-            {
-                panelPause.gameObject.SetActive(false);
-            }
-            else
-            {
-                panelPause.gameObject.SetActive(true);
-            }
+            SetPause();
         }
     }
+
+
+    public void SetPause()
+    {
+        if (panelPause.activeSelf == true)
+        {
+            panelPause.gameObject.SetActive(false);
+            Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            panelPause.gameObject.SetActive(true);
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+
     public void SetHealthBar(float health, float startingHealth)
     {
-        BarraDeVida.fillAmount = health/startingHealth;
+        BarraDeVida.fillAmount = health / startingHealth;
 
     }
-    public void ShowPanelGameOver() { 
-     panelGameOver.SetActive(true);
-    
+    public void ShowPanelGameOver()
+    {
+        panelGameOver.SetActive(true);
+        Invoke("ReiniciarEscena", 1.5f);
+    }
+
+    public void ReiniciarEscena()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Reanudar()
     {
-        Debug.Log("rea");
         panelPause.SetActive(false);
     }
 
@@ -56,5 +75,5 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
-    
+
 }

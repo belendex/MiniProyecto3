@@ -35,16 +35,18 @@ public class PlayerController : MonoBehaviour
 
     private float currentLerpTime;
     public Animator animator;
-    public bool isZoom= false;
+    public bool isZoom = false;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0) return;
         Move();
         RotateCamera();
 
@@ -93,16 +95,16 @@ public class PlayerController : MonoBehaviour
 
         pitch = Mathf.Clamp(pitch, -40f, 40f);
 
-        if (isZoom==true)
+        if (isZoom == true)
         {
-            transform.eulerAngles= new Vector3 (0f, yaw, 0f);
+            transform.eulerAngles = new Vector3(0f, yaw, 0f);
 
         }
         else
         {
-            CinemachineCameraTarget.transform.eulerAngles = new Vector3 (0f,yaw, 0f);
+            CinemachineCameraTarget.transform.eulerAngles = new Vector3(0f, yaw, 0f);
         }
-        CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(pitch,0f , 0f);
+        CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
     }
 
     void OnCollisionStay(Collision other)
@@ -113,5 +115,5 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
+
 }

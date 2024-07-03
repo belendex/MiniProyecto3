@@ -9,10 +9,12 @@ public class ConsolaPuerta : MonoBehaviour
     public Animator door;
     public bool isOpen;
     public bool playerNear;// esta el player cerca?
-
+    public Renderer myMaterial;
     public void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        myMaterial.material.EnableKeyword("_EMISSION");
+
     }
     public void Update()
     {
@@ -22,7 +24,18 @@ public class ConsolaPuerta : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 isOpen = !isOpen;
+                if (isOpen == true)
+                {
+                    myMaterial.material.color = Color.green;
+                    myMaterial.material.SetColor("_EmissionColor", Color.green);
+                }
+                else
+                {
+                    myMaterial.material.color = Color.red;
+                    myMaterial.material.SetColor("_EmissionColor", Color.red);
+                }
             }
+
             door.SetBool("Open", isOpen);
         }
 
@@ -33,7 +46,8 @@ public class ConsolaPuerta : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerController>())
         {
             playerNear = true;
-            //prendo canvas de interaccion 
+            UIManager.Instance.ShowTextInteractive();
+
         }
     }
 
@@ -42,7 +56,7 @@ public class ConsolaPuerta : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerController>())
         {
             playerNear = false;
-            //apago canvas de interaccion 
+            UIManager.Instance.HideTextInteractive();
         }
     }
 

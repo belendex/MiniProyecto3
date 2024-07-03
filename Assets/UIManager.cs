@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
     public GameObject panelGameOver;
     public GameObject panelPause;
+    public GameObject textoInteractivo;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -76,4 +77,12 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void ShowTextInteractive()
+    {
+        textoInteractivo.SetActive(true);
+    }
+    public void HideTextInteractive()
+    {
+        textoInteractivo.SetActive(false);
+    }
 }

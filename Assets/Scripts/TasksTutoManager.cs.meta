@@ -3,7 +3,13 @@ guid: bbdda92dde919194bbaa9af5717b0c3f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - tasksTexts: {instanceID: 0}
+  - dialogueText: {instanceID: 0}
+  - hitMaterial: {instanceID: 0}
+  - noHitMaterial: {instanceID: 0}
+  - buttonExit: {fileID: 100000, guid: a597891020ca05d4e9c2f20e089b6b84, type: 3}
+  - soldierTutoMission: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

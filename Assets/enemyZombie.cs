@@ -21,11 +21,11 @@ public class enemyZombie : MonoBehaviour
     void Update()
     {
         float distancia = Vector3.Distance(transform.position, jugador.position);
-        transform.LookAt(jugador.position);
+
         if (distancia < distanciaMinima)
         {
             Vector3 direccion = (jugador.position - transform.position).normalized;
-            direccion.y = 0;
+
             // Raycast para detectar obstáculos
             RaycastHit hit;
             if (Physics.Raycast(transform.position, direccion, out hit, distanciaMinima))
@@ -43,7 +43,7 @@ public class enemyZombie : MonoBehaviour
             transform.position = new Vector3(transform.position.x, newY, transform.position.z);
 
             // Mover el enemigo hacia el jugador
-            transform.position+=direccion * velocidadMovimiento * Time.deltaTime;
+            transform.Translate(direccion * velocidadMovimiento * Time.deltaTime);
         }
     }
 

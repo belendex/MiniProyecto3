@@ -18,30 +18,33 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnCollisionEnter(Collision collision)
-    {   
-        Debug.Log("colisioné con:"+collision.gameObject.name);
-        Debug.Log("pos Bala " + transform.position);
-        if(collision.gameObject.CompareTag("TutoObject"))
+    {
+        Debug.Log("colisioné con:" + collision.gameObject.name);
+     
+        if (collision.gameObject.CompareTag("TutoObject"))
         {
             collision.gameObject.GetComponent<MeshRenderer>().material = greenMat;
-            if(tutoManager != null)
+            if (tutoManager != null)
             {
-                if(tipoArma == "Pistol")
+                if (tipoArma == "Pistol")
                 {
                     tutoManager.task03Complete();
                 }
-                else if (tipoArma=="Rifle")
+                else if (tipoArma == "Rifle")
                 {
                     tutoManager.task06Complete();
                 }
             }
         }
-
-        Destroy(gameObject);
+        if (!collision.gameObject.GetComponent<PlayerController>())
+        {
+            
+            Destroy(gameObject,0.2f);
+        }
 
 
 

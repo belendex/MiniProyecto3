@@ -11,9 +11,9 @@ public class Weapon : MonoBehaviour
     public float damage;
     public int maxAmmo;
     private int currentAmmo;
-    [SerializeField] private Image ammoImg;
+    public Image ammoImg;
 
-    private AudioSource aSource;
+    public AudioSource aSource;
     [SerializeField] private AudioClip reloadClip;
     [SerializeField] private AudioClip shootClip;
 
@@ -79,7 +79,7 @@ public class Weapon : MonoBehaviour
             {
                 Vector3 shootDirection = cameraHit.point - firePoint.position;
                 firePoint.rotation = Quaternion.LookRotation(shootDirection);
-                Debug.Log("Punto Dis " + firePoint.position);
+              
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(shootDirection));
                 bullet.GetComponent<BulletScript>().tipoArma = this.type.ToString();
                 Rigidbody rb = bullet.GetComponent<Rigidbody>();

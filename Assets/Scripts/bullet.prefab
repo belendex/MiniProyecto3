@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 4589239817234488905}
   - component: {fileID: 3503081175831741991}
   - component: {fileID: 5568845335823018469}
-  - component: {fileID: 2997766957042556928}
   - component: {fileID: 137269631664180016}
   - component: {fileID: 4398951027397557977}
   - component: {fileID: 4185870670130480349}
-  m_Layer: 0
+  - component: {fileID: 7072054508552604906}
+  m_Layer: 9
   m_Name: bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -30,13 +30,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7109682863142759299}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 377.74, y: 143.91, z: -242.94}
-  m_LocalScale: {x: 0.29913422, y: 0.27876624, z: 0.28552738}
+  m_LocalRotation: {x: -0.51757973, y: 0.42059737, z: -0.4279009, w: -0.6100082}
+  m_LocalPosition: {x: 0.025, y: 0.231, z: 0.052}
+  m_LocalScale: {x: 0.14248498, y: 0.22483417, z: 0.49999997}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 82.617, y: -30.826, z: 45.037}
 --- !u!33 &3503081175831741991
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -87,27 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2997766957042556928
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7109682863142759299}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 1
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &137269631664180016
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -264,3 +243,25 @@ MonoBehaviour:
   greenMat: {fileID: 2100000, guid: c49df09d0072e0a458e690d6e0734072, type: 2}
   tutoManager: {fileID: 0}
   tipoArma: 
+  damage: 0
+--- !u!65 &7072054508552604906
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7109682863142759299}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000005, y: 1.0000005, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}

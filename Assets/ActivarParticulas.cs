@@ -18,8 +18,9 @@ public class ActivarParticulas : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Verificar si el objeto que entró en el trigger tiene la etiqueta "bullet"
-        if (other.CompareTag("bullet"))
+        if (other.CompareTag("Bullet"))
         {
+            print("ENTRE");
             // Activar el sistema de partículas si está desactivado
             if (!sistemaParticulasPropio.activeSelf)
             {

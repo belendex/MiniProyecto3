@@ -49,7 +49,7 @@ public class enemyZombie : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("bullet"))
+        if (other.CompareTag("Bullet"))
         {
             int dmg = other.gameObject.GetComponent<BulletScript>().damage;
             life = life - dmg;

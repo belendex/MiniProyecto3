@@ -11,7 +11,7 @@ public class enemyZombie : MonoBehaviour
     public int life;
     public GameObject particles;
 
-    private Transform jugador;
+    public Transform jugador;
 
     void Start()
     {
@@ -44,6 +44,7 @@ public class enemyZombie : MonoBehaviour
 
             // Mover el enemigo hacia el jugador
             transform.Translate(direccion * velocidadMovimiento * Time.deltaTime);
+            transform.LookAt(-jugador.position);
         }
     }
 
@@ -57,7 +58,7 @@ public class enemyZombie : MonoBehaviour
             if (life < 0)
             {
                 particles.SetActive(true);
-                Destroy(gameObject, 1.7f);
+                Destroy(gameObject, 0.5f);
             }
         }
     }

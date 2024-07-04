@@ -243,7 +243,7 @@ MonoBehaviour:
   greenMat: {fileID: 2100000, guid: c49df09d0072e0a458e690d6e0734072, type: 2}
   tutoManager: {fileID: 0}
   tipoArma: 
-  damage: 0
+  damage: 50
 --- !u!65 &7072054508552604906
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -23,11 +23,12 @@ public class BulletScript : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("colisioné con:" + collision.gameObject.name);
+      
      
         if (collision.gameObject.CompareTag("TutoObject"))
         {
             collision.gameObject.GetComponent<MeshRenderer>().material = greenMat;
+          
             if (tutoManager != null)
             {
                 if (tipoArma == "Pistol")

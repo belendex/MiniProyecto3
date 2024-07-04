@@ -92,7 +92,7 @@ public class TasksTutoManager : MonoBehaviour
         soldierTutoMission.ourTask = MissionScript.tasks.task04;
         soldierTutoMission.isReady = true;
         StopCoroutine(SetTaskText(task04));
-        StartCoroutine(SetTaskText(task04));
+        
 
 
     }

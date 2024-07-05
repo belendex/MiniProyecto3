@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     public GameObject panelGameOver;
     public GameObject panelPause;
     public GameObject textoInteractivo;
+    public GameObject final;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -84,5 +85,10 @@ public class UIManager : MonoBehaviour
     public void HideTextInteractive()
     {
         textoInteractivo.SetActive(false);
+    }
+    public void ShowFinalCanvas()
+    {
+        final.SetActive(true);
+        Invoke("Salir", 2f);
     }
 }

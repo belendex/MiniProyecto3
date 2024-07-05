@@ -46,7 +46,7 @@ public class Gun : MonoBehaviour
             shootDirection.x += Random.Range(-spreadAmount, spreadAmount);
             shootDirection.y += Random.Range(-spreadAmount, spreadAmount);
             shootDirection.z += Random.Range(-spreadAmount, spreadAmount);*/
-
+            // -
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(shootDirection));
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             rb.AddForce(bullet.transform.forward * bulletSpeed, ForceMode.Impulse);

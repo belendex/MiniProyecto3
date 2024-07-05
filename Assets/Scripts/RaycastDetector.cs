@@ -33,10 +33,10 @@ public class RaycastDetector : MonoBehaviour
             if (hitInteractable.item == InteractableItem.typeItem.Gun)
             {
                 textObject.text = "Press " + interactKey + " to take a pistol";
-                
+
                 if (Input.GetKeyDown(interactKey))
                 {
-                    
+
 
                     if (hitInteractable.ObjetoEncendido != null)
                     {
@@ -66,9 +66,9 @@ public class RaycastDetector : MonoBehaviour
                 }
 
             }
-            else if(hitInteractable.item == InteractableItem.typeItem.SoldierTuto)
+            else if (hitInteractable.item == InteractableItem.typeItem.SoldierTuto)
             {
-                if(hitMission.isReady)
+                if (hitMission.isReady)
                 {
                     textObject.text = "Press " + interactKey + " to speak with sargeant";
                 }
@@ -79,7 +79,7 @@ public class RaycastDetector : MonoBehaviour
                     {
                         tutoManager.task01Complete();
                         hitMission.isReady = false;
-                        weapons.SetActive(true); 
+                        weapons.SetActive(true);
                     }
                     else if (hitMission != null && hitMission.isTuto && hitMission.ourTask == MissionScript.tasks.task04 && hitMission.isReady)
                     {
@@ -93,7 +93,7 @@ public class RaycastDetector : MonoBehaviour
                     }
                 }
             }
-            else if(hitInteractable.item == InteractableItem.typeItem.PCtuto)
+            else if (hitInteractable.item == InteractableItem.typeItem.PCtuto)
             {
                 textObject.text = "Press " + interactKey + " to end training";
                 if (Input.GetKeyDown(interactKey))
@@ -101,24 +101,24 @@ public class RaycastDetector : MonoBehaviour
                     fadeController.FadeOut();
                 }
             }
-            else if(hitInteractable.item == InteractableItem.typeItem.EndGame) 
+            else if (hitInteractable.item == InteractableItem.typeItem.EndGame)
             {
                 textObject.text = "Press " + interactKey + " interact";
                 if (Input.GetKeyDown(interactKey))
                 {
-                    nave.SetActive(true) ;
+                    nave.SetActive(true);
                 }
             }
-            else if(hitInteractable.item == InteractableItem.typeItem.Nave)
+            else if (hitInteractable.item == InteractableItem.typeItem.Nave)
             {
                 textObject.text = "Press " + interactKey + " to end";
                 if (Input.GetKeyDown(interactKey))
                 {
-                    SceneManager.LoadScene("MainMenu");
+                    UIManager.Instance.ShowFinalCanvas();
                 }
             }
         }
-        
+
         else
         {
             textObject.text = "";
